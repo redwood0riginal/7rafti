@@ -15,13 +15,18 @@ class userController extends Controller
     public function login(Request $request)
     {
         $formFields = $request->validate([
-            'Email' => 'required',
-            'Password' => 'required'
+            'email' => 'required',
+            'password' => 'required'
         ]);
 
-        if (auth()->attempt(['email' => $formFields['Email'], 'password' => $formFields['Password']])) {
+        if (auth()->attempt(['email' => $formFields['email'], 'password' => $formFields['password']])) {
             $request->session()->regenerate();
-            return redirect('/')->with('success', 'Loged in successfully!!');
+            if(auth()->user()->role == 'client'){
+                return redirect()->route('besoins.create')->with('success', 'Loged in successfully!!');
+            }
+            if(auth()->user()->role == 'craftsman'){
+                return redirect('/')->route('services.create')->with('success', 'Loged in successfully!!');
+            }
         } else {
             return redirect('/login')->with('error', 'wrong email or password');
         }

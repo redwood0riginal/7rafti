@@ -1,45 +1,45 @@
-/* Add this CSS in your CSS file or in <style> tags if using Vue.js single file component */
+/* Custom Styles for Login Form */
+
+body {
+    background-color: #f8f9fa;
+}
+
+
 
 .login-card {
-    max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
+
+    max-width: 400px; /* Set a max-width for the card */
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
-.login-card .card-title {
-    text-align: center;
+.card-title {
+    color: #343a40;
 }
 
-.login-card .form-group {
-    margin-bottom: 20px;
-}
-
-.login-card label {
+.form-group label {
     font-weight: bold;
+    color: #495057;
 }
 
-.login-card input[type="email"],
-.login-card input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.form-control {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.login-card button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+.btn-primary {
     background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.login-card button[type="submit"]:hover {
-    background-color: #0056b3;
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
 }

@@ -1,0 +1,13 @@
+/* Custom Styles for Besoins List */
+
+.besoin-list li {
+    margin-bottom: 20px;
+}
+
+.besoin-list li h5 {
+    margin-bottom: 5px;
+}
+
+.besoin-list li p {
+    margin-bottom: 10px;
+}

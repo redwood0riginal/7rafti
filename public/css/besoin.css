@@ -1,0 +1,23 @@
+/* Custom Styles for Besoin Form */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #343a40;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+}

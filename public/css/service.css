@@ -1,0 +1,14 @@
+/* Custom Styles for Service Creation Form */
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+}

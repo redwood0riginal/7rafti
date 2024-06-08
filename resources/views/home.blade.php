@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- @include('partials.hero-section') --}}
+<body style="color: black">
     @include('partials.services-section')
     @include('partials.how-it-works')
+</body>
+    {{-- @include('partials.hero-section') --}}
+
 @endsection

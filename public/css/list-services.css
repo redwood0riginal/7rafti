@@ -1,0 +1,13 @@
+/* Custom Styles for Services List */
+
+.service-list li {
+    margin-bottom: 20px;
+}
+
+.service-list li h5 {
+    margin-bottom: 5px;
+}
+
+.service-list li p {
+    margin-bottom: 10px;
+}

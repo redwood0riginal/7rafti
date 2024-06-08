@@ -19,8 +19,6 @@ class clientController extends Controller
             'prenom' => ['required'],
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8', 'confirmed'],
-            'ville' => ['required'],
-            'phone' => ['required'],
         ]);
 
         $formFields['password'] = bcrypt($formFields['password']);

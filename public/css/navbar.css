@@ -1,80 +1,51 @@
+/* Custom Navbar Styles */
 .navbar {
-    background-color: #fff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif; /* Specify font family */
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar-brand {
+    font-size: 1.5rem; /* Larger brand font size */
+    font-weight: bold; /* Bold brand text */
+    color: #007bff; /* Brand color */
 }
 
-.navbar .brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Transition for color change */
+.navbar-brand:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
 
-.navbar .nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
+.navbar-nav .nav-link {
+    font-size: 1.1rem; /* Slightly larger link font size */
+    color: #343a40; /* Darker link color */
+    padding: 10px 15px; /* More padding for larger clickable area */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.navbar .nav-links li {
-    margin: 0;
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Blue color on hover */
 }
 
-.navbar .nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease; /* Transition for color change */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+    color: #007bff; /* Blue color for active link */
+    font-weight: bold; /* Bold active link */
 }
 
-.navbar .nav-links li a:hover {
-    color: #007BFF;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Transition for color change */
+.navbar-nav .btn-link {
+    color: #343a40; /* Button link color */
+    padding: 0; /* Remove padding for button */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-@media (max-width: 768px) {
-    .navbar .nav-links {
-        display: none;
-    }
+.navbar-nav .btn-link:hover {
+    color: #007bff; /* Blue color on hover */
+}
 
-    .navbar .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
+.navbar-toggler {
+    border: none; /* Remove border from toggler */
+}
 
-    .navbar .nav-links.active li {
-        margin: 0;
-    }
-
-    .navbar .nav-links.active li a {
-        display: block;
-        padding: 1rem;
-        color: #333;
-        text-align: center;
-        transition: background-color 0.3s ease;
-    }   
-
-    .navbar .nav-links.active li a:hover {
-        background-color: #f0f0f0;
-    }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Customize toggler icon */
 }
