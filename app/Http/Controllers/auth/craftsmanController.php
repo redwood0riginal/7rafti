@@ -52,12 +52,12 @@ class craftsmanController extends Controller
         $formFields = $request->validate([
             'nom' => '',
             'prenom' => '',
-            'email' => '',
             'phone' => '',
-            'description' => 'max:255',
+            'bio' => 'max:255',
             'birthdate' => '',
             'gender' => 'in:male,female',
             'address' => 'max:255',
+            'ville' => '',
             'service' => '',
             'metier' => '',
         ]);

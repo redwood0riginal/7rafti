@@ -1,0 +1,123 @@
+/* public/css/main.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.container {
+    max-width: 800px; /* Increased size */
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 24px; /* Increased font size */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.form-group label {
+    margin-bottom: 10px; /* Increased margin */
+    display: block;
+    font-weight: bold; /* Bold labels */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.form-group div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group div input {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px; /* Increased padding */
+    border: none;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size */
+}
+
+button:hover {
+    background: #218838;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Adjust padding for small screens */
+    }
+
+    .form-group div {
+        flex-direction: column;
+    }
+
+    .form-group div input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}

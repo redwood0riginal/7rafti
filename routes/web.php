@@ -19,13 +19,11 @@ Route::get('/', function () {
 //     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 // });
 
-Route::group(['middleware' => ['auth', 'role:craftsman']], function () {
-    Route::resource('services', serviceController::class)->except(['show', 'index']);
-});
+Route::resource('services', serviceController::class);
 
-Route::group(['middleware' => ['auth', 'role:client']], function () {
-    Route::resource('besoins', besoinController::class)->except(['show', 'index']);
-});
 
- Route::resource('/client', clientController::class);
- Route::resource('/craftsman', craftsmanController::class);
+
+Route::resource('besoins', besoinController::class);
+
+Route::resource('/client', clientController::class);
+Route::resource('/craftsman', craftsmanController::class);

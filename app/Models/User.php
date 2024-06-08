@@ -19,11 +19,20 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'nom',
+        'prenom',
         'email',
         'phone',
         'password',
         'role',
+        'ville',
+        'bio',
+        'metier',
+        'phone',
+        'service',
+        'gender',
+        'profile',
+        'birthdate'
     ];
 
     protected function profile(): Attribute{
