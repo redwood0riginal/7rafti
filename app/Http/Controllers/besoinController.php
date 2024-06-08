@@ -30,6 +30,7 @@ class besoinController extends Controller
             'client_id' => auth()->id(), // Assuming the authenticated user is the client
             'titre' => $request->titre,
             'description' => $request->description,
+            'status' => $request->status,
 
         ]);
 
@@ -51,11 +52,13 @@ class besoinController extends Controller
         $request->validate([
             'titre' => 'required|string|max:255',
             'description' => 'required|string',
+            'status' => 'required'
         ]);
 
         $besoin->update([
             'titre' => $request->titre,
             'description' => $request->description,
+            'status' => $request->status
         ]);
 
         return redirect()->route('besoins.index')->with('success', 'Besoin updated successfully.');
