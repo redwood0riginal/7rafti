@@ -2,13 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\besoinController;
 use App\Http\Controllers\CraftsmanController;
 use App\Http\Controllers\ClientController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::resource('besoin', besoinController::class);
 
 
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
@@ -20,5 +23,9 @@ Route::group(['middleware' => ['auth', 'role:craftsman']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'role:client']], function () {
-    Route::get('/poster-besoin', [ClientController::class, 'index'])->name('client.poster-besoin');
+
+    Route::resource('/besoin', besoinController::class);
 });
+
+ Route::resource('/client', ClientController::class);
+ Route::resource('/craftsman', craftsmanController::class);

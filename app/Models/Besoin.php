@@ -10,9 +10,10 @@ class Besoin extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'titre',
         'description',
         'user_id',
+        'status'
     ];
     public function client()
     {
