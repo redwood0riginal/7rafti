@@ -1,66 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 7rafti
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/laravel-v8.x-red)
+![PHP](https://img.shields.io/badge/php-%5E7.3-blue)
+![Hackathon](https://img.shields.io/badge/Hackathon-5th_Place-green)
 
-## About Laravel
+7rafti is an application designed to connect young Moroccan craftsmen with clients who need their services. This project won the 5th prize in a hackathon.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![7rafti](/public/images/hackathon.jpg)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Creators](#creators)
+- [License](#license)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
+- 🔐 **User Registration & Authentication** ![Registration](https://img.shields.io/badge/feature-user--registration-brightgreen): Secure sign-up and login for both craftsmen and clients.
+- 🧑‍🎨 **Profile Management** ![Profile](https://img.shields.io/badge/feature-profile--management-brightgreen): Users can manage their profiles, showcasing their skills and experience.
+- 🛠️ **Job Posting & Bidding** ![Job Posting](https://img.shields.io/badge/feature-job--posting-brightgreen): Clients can post jobs, and craftsmen can bid on them.
+- 💬 **Messaging System** ![Messaging](https://img.shields.io/badge/feature-messaging-brightgreen): In-app messaging to facilitate communication between clients and craftsmen.
+- ⭐ **Rating & Review System** ![Rating](https://img.shields.io/badge/feature-rating--review-brightgreen): Clients can rate and review craftsmen based on their work.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/HatimIlyas04/7ARFTY.git
+    cd 7ARFTY
+    ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Install Dependencies**:
+    ```bash
+    composer install
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **Copy the `.env` File**:
+    ```bash
+    cp .env.example .env
+    ```
 
-## Laravel Sponsors
+4. **Generate an Application Key**:
+    ```bash
+    php artisan key:generate
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. **Configure the `.env` File**:
+    Edit the `.env` file to set up your database and other environment settings.
 
-### Premium Partners
+6. **Run Database Migrations**:
+    ```bash
+    php artisan migrate
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+7. **Serve the Application**:
+    ```bash
+    php artisan serve
+    ```
+
+## Usage
+
+- Visit `http://127.0.0.1:8000` in your web browser.
+- Register as a new user.
+- Create a profile if you are a craftsman, or post a job if you are a client.
+- Use the messaging system to communicate and finalize details.
+- Complete the job and leave a review.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Fork the repository**.
+2. **Create a new branch**:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. **Make your changes and commit them**:
+    ```bash
+    git commit -m "Description of changes"
+    ```
+4. **Push to the branch**:
+    ```bash
+    git push origin feature-branch
+    ```
+5. **Create a Pull Request**.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Creators
+- Hatim Ilyas [![GitHub followers](https://img.shields.io/github/followers/HatimIlyas04?label=Follow&style=social)](https://github.com/hatimIlyas04)
+- Ahmed Tiguini [![GitHub followers](https://img.shields.io/github/followers/AhmedTiguini?label=Follow&style=social)](https://github.com/redwood0riginal)
