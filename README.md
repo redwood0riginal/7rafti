@@ -6,7 +6,7 @@
 
 7rafti is an application designed to connect young Moroccan craftsmen with clients who need their services. This project won the 5th prize in a hackathon.
 
-![7rafti](/public/images/hackathon.jpg)
+
 
 ## Table of Contents
 - [Features](#features)
